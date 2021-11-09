@@ -1,5 +1,28 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
-const RocketElement = () => (<h1> This is my Rocket</h1>);
+import Rocket from './IndividualRocket';
+
+const RocketElement = () => {
+  const rockets = useSelector((state) => state.rocketsReducer.rockets);
+
+  return (
+    <div>
+      <ul>
+        {rockets
+                 && rockets.map((rocket) => (
+                   <Rocket
+                     id={rocket.id}
+                     key={rocket.id}
+                     name={rocket.name}
+                     description={rocket.description}
+                     image={rocket.flickr_images[0]}
+
+                   />
+                 ))}
+      </ul>
+    </div>
+  );
+};
 
 export default RocketElement;
