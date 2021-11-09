@@ -27,7 +27,7 @@ export const cancelMission = (id) => ({
 const missionsReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_MISSIONS:
-      return [action.data];
+      return action.data;
 
     case RESERVE_MISSIONS: {
       const newState = state.map((rocket) => {
