@@ -1,6 +1,7 @@
 .navlist {
   list-style: none;
   display: flex;
+  flex-direction: row;
   gap: 1rem;
   margin-right: 5rem;
 }
