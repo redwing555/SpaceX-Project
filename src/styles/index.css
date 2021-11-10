@@ -14,7 +14,7 @@ h1 {
   border-top: 1px solid #d9d6d6;
   border-bottom: 1px solid #d9d6d6;
   display: grid;
-  grid-template-columns: 1fr 6fr 1.5fr 1fr;
+  grid-template-columns: 1fr 5.5fr 1.5fr 1.5fr;
 }
 
 .missions-container span {
