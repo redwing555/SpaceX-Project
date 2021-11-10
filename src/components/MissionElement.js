@@ -9,11 +9,16 @@ const MissionElement = () => {
   useEffect(() => {
     dispatch(fetchAllMissions());
   }, []);
+  const emptyHeader = '';
   return (
-    <>
+    <div className="missions-container">
+      <span><b>Mission</b></span>
+      <span><b>Description </b></span>
+      <span><b>Status</b></span>
+      <span>{emptyHeader}</span>
       {missionsData.map((item) => (<IndividualMission key={item.mission_id} data={item} />
       ))}
-    </>
+    </div>
   );
 };
 export default MissionElement;
