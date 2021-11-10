@@ -1,6 +1,6 @@
 const FETCH_MISSIONS = 'SpaceX-Project/books/FETCH_MISSIONS';
 const RESERVE_MISSIONS = 'SpaceX-Project/books/RESERVE_MISSIONS';
-const CANCEL_MISSIONS = 'SpaceX-Project/books/RESERVE_MISSIONS';
+const CANCEL_MISSIONS = 'SpaceX-Project/books/CANCEL_MISSIONS';
 
 const MISSIONS_URL = 'https://api.spacexdata.com/v3/missions';
 const initialState = [];
@@ -29,21 +29,17 @@ const missionsReducer = (state = initialState, action) => {
     case FETCH_MISSIONS:
       return action.data;
 
-    case RESERVE_MISSIONS: {
-      const newState = state.map((rocket) => {
-        if (rocket.id !== action.id) return rocket;
+    case RESERVE_MISSIONS:
+      return state.map((rocket) => {
+        if (rocket.mission_id !== action.id) return rocket;
         return { ...rocket, reserved: true };
       });
-      return newState;
-    }
 
-    case CANCEL_MISSIONS: {
-      const newState = state.map((rocket) => {
-        if (rocket.id !== action.id) return rocket;
+    case CANCEL_MISSIONS:
+      return state.map((rocket) => {
+        if (rocket.mission_id !== action.id) return rocket;
         return { ...rocket, reserved: false };
       });
-      return newState;
-    }
 
     default:
       return state;
