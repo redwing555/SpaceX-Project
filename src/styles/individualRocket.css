@@ -4,9 +4,11 @@ li {
 }
 
 p {
-  padding: 0 1rem 0 1rem;
+  padding: 0 2rem 0 0.5rem;
+  font-family: sans-serif;
 }
 
 h3 {
-  padding: 1rem;
+  padding: 0.5rem;
+  font-family: 'Red Hat Mono', monospace;
 }

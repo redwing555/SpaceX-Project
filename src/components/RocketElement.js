@@ -11,16 +11,9 @@ const RocketElement = () => {
     <div>
       <ul>
         {rockets
-                 && rockets.map((rocket) => (
-                   <Rocket
-                     id={rocket.id}
-                     key={rocket.id}
-                     name={rocket.name}
-                     description={rocket.description}
-                     image={rocket.flickr_images[0]}
-
-                   />
-                 ))}
+                   && rockets.map((rocket) => (
+                     <Rocket key={rocket.id} rocket={rocket} />
+                   ))}
       </ul>
     </div>
   );

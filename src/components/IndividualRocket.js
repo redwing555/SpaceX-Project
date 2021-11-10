@@ -1,30 +1,31 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import '../styles/individualRocket.css';
 
-/* eslint-disable  */
-const Rocket = ({ image, description, name }) => {
+const Rocket = (prop) => {
+  const { rocket } = prop;
+  const {
+    name,
+    flickr_images: flickrImages,
+    description,
+  } = rocket;
+
   return (
     <li>
-        <div>
-      
-      <img src={image} alt="img-rocket" width="250" height="160"/>
+      <div>
+
+        <img src={flickrImages} alt="img-rocket" width="250" height="160" />
       </div>
       <div>
-      <h3>{name}</h3>
-      <p>{description}</p>
+        <h3>{name}</h3>
+        <p>{description}</p>
       </div>
-      
+
     </li>
   );
 };
 
 export default Rocket;
 
-
-Rocket.PropTypes = {
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+Rocket.defaultProps = {
+  reserved: false,
 };
-/* eslint-enable  */

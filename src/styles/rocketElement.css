@@ -2,5 +2,5 @@ ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
 }
