@@ -15,9 +15,12 @@
 }
 
 .links {
-  color: rgb(128, 128, 255);
-  font-family: 'Open Sans', sans-serif;
+  color: black;
+  font-family: 'Red Hat Mono', monospace;
+  font-weight: 600;
 }
+
+
 
 .logo {
   width: 4rem;
@@ -43,8 +46,9 @@
 
 nav {
   padding-top: 1rem;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #B1A4A4;
   padding-bottom: 0.5rem;
   margin-bottom: 4rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  background-color: #B1A4A4;
 }
