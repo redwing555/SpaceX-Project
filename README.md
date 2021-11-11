@@ -19,10 +19,10 @@ This **Single Page App**  was built with **React-Redux**. The main page `(Rocket
 - Missions Page
 - Profile Page 
 
-The contents displayed on the Rocket's page is fetched from a [Rocket API](https://api.spacexdata.com/v3/rockets). When a user clicks the _"Reserve rocket"_ button, actions are dispatched to update the store and the reserved rocket shows a _"Reserved"_ badge and "Cancel reservation" button instead of the default "Reserve rocket"
+The contents displayed on the Rocket's page are fetched from a [Rocket API](https://api.spacexdata.com/v3/rockets). When a user clicks the _"Reserve rocket"_ button, actions are dispatched to update the store and the reserved rocket shows a _"Reserved"_ badge and "Cancel reservation" button instead of the default "Reserve rocket"
 
 
-The contents displayed on the Missions' page is fetched from a [Missions API](https://api.spacexdata.com/v3/missions). When a user clicks the _"Join Mission"_ button, actions are dispatched to update the store, the join mission button changes to _"Leave Mission"_ and the corresponding badge for that mission shows _"Active Member"_. On the other hand, when the _"Leave Mission"_ button is clicked, the button changes to _"Join Mission"_ and the corresponding badge shows _"Not A Member"_
+The contents displayed on the Missions' page are fetched from a [Missions API](https://api.spacexdata.com/v3/missions). When a user clicks the _"Join Mission"_ button, actions are dispatched to update the store, the join mission button changes to _"Leave Mission"_ and the corresponding badge for that mission shows _"Active Member"_. On the other hand, when the _"Leave Mission"_ button is clicked, the button changes to _"Join Mission"_ and the corresponding badge shows _"Not A Member"_
 
 The Profile Page displays the Name of All `Reserved Rockets` and the `Joined Missions`.
 
