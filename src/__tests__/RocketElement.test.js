@@ -1,4 +1,5 @@
 import React from 'react';
+import renderer from 'react-test-renderer';
 import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import store from '../redux/configureStore';
@@ -14,14 +15,14 @@ describe('Rocket Element Tests', () => {
     expect(screen.queryByText(/Missions/)).toBeNull();
     expect(screen.queryByText(/Description/)).toBeNull();
   });
-  // it('renders correctly', () => {
-  //   const tree = renderer
-  //     .create(
-  //       <Router>
-  //         <NavigationLinks />
-  //       </Router>,
-  //     )
-  //     .toJSON();
-  //   expect(tree).toMatchSnapshot();
-  // });
+  it('renders correctly', () => {
+    const tree = renderer
+      .create(
+        <Provider store={store}>
+          <RocketElement />
+        </Provider>,
+      )
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });

@@ -1,4 +1,5 @@
 import React from 'react';
+import renderer from 'react-test-renderer';
 import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import store from '../redux/configureStore';
@@ -13,14 +14,14 @@ describe('Navigation Links Tests', () => {
     );
     expect(screen.queryByText(/Missions reservations/)).toBeTruthy();
   });
-  // it('renders correctly', () => {
-  //   const tree = renderer
-  //     .create(
-  //       <Router>
-  //         <NavigationLinks />
-  //       </Router>,
-  //     )
-  //     .toJSON();
-  //   expect(tree).toMatchSnapshot();
-  // });
+  it('renders correctly', () => {
+    const tree = renderer
+      .create(
+        <Provider store={store}>
+          <ProfileElement />
+        </Provider>,
+      )
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
