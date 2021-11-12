@@ -10,6 +10,7 @@ import ProfileElement from './ProfileElement';
 import DragonElement from './DragonElement';
 import { loadRocketsData } from '../redux/rockets/rockets';
 import { loadDragonsData } from '../redux/dragons/dragons';
+import Footer from './Footer';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -35,6 +36,7 @@ const App = () => {
           <ProfileElement />
         </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 };
