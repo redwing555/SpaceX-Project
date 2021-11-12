@@ -1,0 +1,55 @@
+.footer-container {
+  display: flex;
+  gap: 5rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+  border-top: 2px solid gray;
+  background-color: #b1a4a4;
+}
+
+.copyright-names {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.creators p {
+  color: black;
+  font-family: 'Red Hat Mono', monospace;
+  font-weight: 600;
+  font-size: 1rem;
+  align-self: center;
+  margin-left: 1rem;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.fab {
+  color: black;
+  width: 2rem;
+  height: 2rem;
+}
+
+small {
+  align-self: center;
+  padding-bottom: 1rem;
+  font-family: 'Red Hat Mono', monospace;
+  letter-spacing: 0.3rem;
+  word-spacing: 1.5rem;
+}
+
+.logo-footer {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 2rem;
+  margin-left: 20rem;
+}
