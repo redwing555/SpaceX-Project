@@ -20,8 +20,12 @@ const Navbar = () => (
               <NavLink to="/missions" className="links" style={(isActive) => ({ textDecoration: isActive ? 'underline' : 'none' })}> Missions </NavLink>
             </li>
             <li>
+              <NavLink to="/dragons" className="links" style={(isActive) => ({ textDecoration: isActive ? 'underline' : 'none' })}> Dragons</NavLink>
+            </li>
+            <li>
               <NavLink to="/profile" className="links profile" style={(isActive) => ({ textDecoration: isActive ? 'underline' : 'none' })}> Profile </NavLink>
             </li>
+
           </ul>
         </div>
       </div>

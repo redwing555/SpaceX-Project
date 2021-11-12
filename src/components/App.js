@@ -7,12 +7,15 @@ import Navbar from './Navbar';
 import RocketElement from './RocketElement';
 import MissionElement from './MissionElement';
 import ProfileElement from './ProfileElement';
+import DragonElement from './DragonElement';
 import { loadRocketsData } from '../redux/rockets/rockets';
+import { loadDragonsData } from '../redux/dragons/dragons';
 
 const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadRocketsData());
+    dispatch(loadDragonsData());
   }, [dispatch]);
 
   return (
@@ -24,6 +27,9 @@ const App = () => {
         </Route>
         <Route path="/missions">
           <MissionElement />
+        </Route>
+        <Route path="/dragons">
+          <DragonElement />
         </Route>
         <Route path="/profile">
           <ProfileElement />

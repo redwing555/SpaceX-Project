@@ -4,9 +4,14 @@ import '../styles/ProfileElement.css';
 const ProfileElement = () => {
   const missionsData = useSelector((state) => state.missionsReducer);
   const rockets = useSelector((state) => state.rocketsReducer.rockets);
+  const dragons = useSelector((state) => state.dragonsReducer.dragons);
   let reservedRockets;
+  let reservedDragons;
   if (rockets) {
     reservedRockets = rockets.filter((rocket) => rocket.reserved);
+  }
+  if (dragons) {
+    reservedDragons = dragons.filter((dragon) => dragon.reserved);
   }
 
   return (
@@ -20,6 +25,20 @@ const ProfileElement = () => {
           {reservedRockets.map((rocket) => (
             <li className="profile-name" key={rocket.id}>
               {rocket.name}
+            </li>
+          ))}
+
+        </ul>
+        )}
+      </div>
+      <div className="profile">
+
+        <h3 className="reservations"> Dragons reservations</h3>
+        {reservedDragons && (
+        <ul className="profile-list">
+          {reservedDragons.map((dragon) => (
+            <li className="profile-name" key={dragon.id}>
+              {dragon.name}
             </li>
           ))}
 
